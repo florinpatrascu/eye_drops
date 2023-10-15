@@ -14,19 +14,18 @@ defmodule EyeDrops.TaskTest do
   end
 
   test "Execute task command" do
-    with_mock Mix.Shell.IO, [cmd: fn (_cmd) -> "command" end] do
+    with_mock Mix.Shell.IO, cmd: fn _cmd -> "command" end do
       Task.exec({:ok, %{name: "test", cmd: "my_command"}})
 
-      assert called Mix.Shell.IO.cmd("my_command")
+      assert called(Mix.Shell.IO.cmd("my_command"))
     end
   end
 
   test "Try execute task command which does not exist" do
-    with_mock IO, [puts: fn (_message) -> "run message" end] do
+    with_mock IO, puts: fn _message -> "run message" end do
       Task.exec({:error, "error message"})
 
-      assert called IO.puts("error message")
+      assert called(IO.puts("error message"))
     end
   end
-
 end

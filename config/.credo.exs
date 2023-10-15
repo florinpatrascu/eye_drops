@@ -51,7 +51,6 @@
         # set this value to 0 (zero).
         {Credo.Check.Design.TagTODO},
         {Credo.Check.Design.TagFIXME},
-
         {Credo.Check.Readability.ModuleDoc, false},
         {Credo.Check.Readability.FunctionNames},
         {Credo.Check.Readability.MaxLineLength, priority: :low, max_length: 80},
@@ -60,7 +59,6 @@
         {Credo.Check.Readability.TrailingWhiteSpace},
         {Credo.Check.Readability.VariableNames},
         {Credo.Check.Readability.Specs, priority: :low},
-
         {Credo.Check.Refactor.ABCSize},
         {Credo.Check.Refactor.CaseTrivialMatches},
         {Credo.Check.Refactor.CondStatements},
@@ -72,7 +70,6 @@
         {Credo.Check.Refactor.NegatedConditionsWithElse},
         {Credo.Check.Refactor.Nesting},
         {Credo.Check.Refactor.UnlessWithElse},
-
         {Credo.Check.Warning.IExPry},
         {Credo.Check.Warning.IoInspect},
         {Credo.Check.Warning.NameRedeclarationByAssignment},
@@ -85,7 +82,7 @@
         {Credo.Check.Warning.UnusedListOperation},
         {Credo.Check.Warning.UnusedStringOperation},
         {Credo.Check.Warning.UnusedTupleOperation},
-        {Credo.Check.Warning.OperationWithConstantResult},
+        {Credo.Check.Warning.OperationWithConstantResult}
       ]
     }
   ]

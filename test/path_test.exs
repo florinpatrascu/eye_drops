@@ -13,9 +13,14 @@ defmodule EyeDrops.File.PathTest do
   end
 
   test "Changed file matches list of paths from task" do
-    result = Path.spotted?("random/lib/mix/tasks/eye_drops.ex", ["lib/mix/tasks/eye_drops.ex", "lib/other.ex"])
+    result =
+      Path.spotted?("random/lib/mix/tasks/eye_drops.ex", [
+        "lib/mix/tasks/eye_drops.ex",
+        "lib/other.ex"
+      ])
+
     assert result == true
-  end 
+  end
 
   test "Changed file matches list of wildcard paths from task" do
     result = Path.spotted?("lib/mix/tasks/eye_drops.ex", ["lib/mix/tasks/*", "test/other.ex"])
@@ -36,5 +41,4 @@ defmodule EyeDrops.File.PathTest do
     result = Path.spotted?("/some/random/lib/eye_drops.ex", ["other/*", "test/somewhere.ex"])
     assert result == false
   end
-
 end

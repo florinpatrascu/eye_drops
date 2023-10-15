@@ -1,6 +1,9 @@
-use Mix.Config
+import Mix.Config
 
-config :eye_drops, 
+config :mix_test_watch,
+  clear: true
+
+config :eye_drops,
   tasks: [
     %{
       id: :unit_tests,
